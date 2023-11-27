@@ -16,7 +16,7 @@ const Materi2 = () => {
     "Saya suka lembur",
   ];
   const kurangUmur = () => {
-    setUmur(umur - 1);
+    umur <= 0 ? null : setUmur(umur - 1);
   };
   const tambahUmur = () => {
     18;

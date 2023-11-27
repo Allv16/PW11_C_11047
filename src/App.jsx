@@ -12,6 +12,8 @@ import CardBackground from "./components/card/CardBackground";
 import Content from "./components/content/Content";
 import Materi2 from "./components/materi/Materi2.jsx";
 import Materi1 from "./components/materi/Materi1.jsx";
+import Game1 from "./components/game/Game1.jsx";
+import Game2 from "./components/game/Game2.jsx";
 
 import Image from "./assets/Image.jsx";
 const content = [
@@ -78,35 +80,20 @@ function App() {
       {/* Container Bawah */}
       <div className="container container-content">
         <div>
-          <h1 className="judulContent">Content Game</h1>
+          <h1 className="judulContent">Game 1</h1>
           <CardBackground>
-            <div className="row align-item-center kolom">
-              {content.map((item, index) => (
-                <Content
-                  key={index}
-                  title={item.title}
-                  image={item.image}
-                  platform={item.platform}
-                  release_date={item.release_date}
-                  genre={item.genre}
-                />
-              ))}
-            </div>
+            <Game1 />
           </CardBackground>
         </div>
       </div>
       {/* COntainer Untuk Materi 1 */}
-      <div className="container container-contenrt">
-        <h1 className="judulContent">Materi 1</h1>
-        <CardBackground>
-          <Materi1 />
-        </CardBackground>
-      </div>
-      <div className="container container-contenrt">
-        <h1 className="judulContent">Materi 2</h1>
-        <CardBackground>
-          <Materi2 />
-        </CardBackground>
+      <div className="container container-content">
+        <div>
+          <h1 className="judulContent">Game 2</h1>
+          <CardBackground>
+            <Game2 />
+          </CardBackground>
+        </div>
       </div>
     </>
   );
